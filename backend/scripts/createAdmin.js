@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import AdminModel from '../models/adminModel.js';
 import 'dotenv/config.js';
 //import { connectDB } from '../config/db.js';
