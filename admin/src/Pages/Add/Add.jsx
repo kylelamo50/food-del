@@ -29,7 +29,7 @@ const Add = ({url}) => {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault()
-        const formData = new FormData();
+        const formData = new FormData(); //formData is used to send files to the server
         formData.append('name', data.name)
         formData.append('description', data.description)
         formData.append('price', data.price)
