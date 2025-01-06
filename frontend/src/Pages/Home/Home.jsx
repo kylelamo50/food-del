@@ -9,7 +9,7 @@ import axios from 'axios'
 const Home = () => {
   const [category,setCategory]=useState("All");
 
- 
+ /*
     useEffect(()=>{
       axios.get('https://food-del-backend-8jq0.onrender.com')
       .then(response=>{
@@ -17,6 +17,21 @@ const Home = () => {
       })
       .catch(err=>console.log(err))
     },[])
+
+    */
+    useEffect(() => {
+      const checkBackendStatus = async () => {
+        try {
+          const response = await axios.get('https://food-del-backend-8jq0.onrender.com'); // Ensure the correct endpoint
+          console.log('Backend status:', response.data);
+        } catch (error) {
+          console.error('Error checking backend status:', error);
+        }
+      };
+  
+      checkBackendStatus();
+    }, []);
+
       
   
   return (
